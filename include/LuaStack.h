@@ -172,7 +172,7 @@ namespace lua { namespace stack {
 
     template<>
     inline int push(lua_State* luaState, lua::Nil value) {
-        LUASTATE_DEBUG_LOG("  PUSH  null\n");
+        LUASTATE_DEBUG_LOG("  PUSH  %s\n", "null");
         lua_pushnil(luaState);
         return 1;
     }
@@ -186,7 +186,7 @@ namespace lua { namespace stack {
     
     template<>
     inline int push(lua_State* luaState, Table value) {
-        LUASTATE_DEBUG_LOG("  PUSH  newTable\n");
+        LUASTATE_DEBUG_LOG("  PUSH  %s\n", "newTable");
         lua_newtable(luaState);
         return 1;
     }
