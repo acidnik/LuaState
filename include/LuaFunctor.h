@@ -16,11 +16,11 @@ namespace lua {
     struct BaseFunctor
     {
         BaseFunctor() {
-            LUASTATE_DEBUG_LOG("Functor %p created!", this);
+            LUASTATE_DEBUG_LOG("Functor %p created!", (void*)this);
         }
         
         virtual ~BaseFunctor() {
-            LUASTATE_DEBUG_LOG("Functor %p destructed!", this);
+            LUASTATE_DEBUG_LOG("Functor %p destructed!", (void*)this);
         }
         
         /// In Lua numbers of argumens can be different so here we will handle these situations.
